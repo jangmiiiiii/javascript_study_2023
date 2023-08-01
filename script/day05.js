@@ -60,5 +60,5 @@ test.addEventListener('click', function(){
     let first = Number(dan2.value)
     let last = Number(calc.value)
     console.log(first, last, first*last)
-    result.value = first*last
+    result.value = first*last /* 결과값 */
 })
