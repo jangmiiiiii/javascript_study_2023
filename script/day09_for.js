@@ -53,7 +53,7 @@ for(let i=0; i<study.length; i++){
 }
 //위 study 배열을 역순으로 출력하기 illustrator > html
 console.log('------------------------------ 역순')
-for(let i=study.length-1; i>=0;   i--){
+for(let i=study.length-1; i>=0; i--){
     console.log(`${i+1}.${study[i]} 공부`)
 }
 
