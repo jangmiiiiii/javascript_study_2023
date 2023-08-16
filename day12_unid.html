@@ -20,40 +20,53 @@
         header h1 a {}
         header h1 a img {}
         header nav {}
+        header nav a {white-space: nowrap;}
+        header nav .nav_bg {
+            background: #fff;
+            position: absolute; width: 100%; height: 500px;
+            z-index: 800; left: 0;
+        }
         header nav .gnb {
             background: lightblue;
             display: flex;
             flex-flow: row nowrap;
-            position:relative; 
-        }        
+            position: relative;
+            z-index: 900; 
+        }     
         header nav .gnb > li {
-            line-height: 100px; margin-right: 70px;
-            
+            position: relative;
+            /* margin-right: 100px; */
         }
         header nav .gnb > li > a {
             font-weight: 800;
+            letter-spacing: -0.02rem;
+            padding-right: 100px;
+            line-height: 100px;
         }
         /* header nav .gnb > li > .sub1 {display: none;} */
         header nav .gnb > li > .sub1 {
-            background: lightgreen; position: absolute;
+            position: absolute; width: 100%;
+            height: 500px;
         }
         header nav .gnb > li > .sub1 > li {
-            line-height: 40px;}
+            margin-right: 40px;
+        }
         header nav .gnb > li > .sub1 > li > a {
-            font-weight: 600;}
+            letter-spacing: -0.02rem;
+            font-weight: 600;
+            display: inline-block;
+            padding: 15px 0 15px 5px;
+        }
         header nav .gnb > li > .sub1 > li > .sub2 {
-            background: rgb(109, 109, 59);
         }
         header nav .gnb > li > .sub1 > li > .sub2 > li {
-            
             border-bottom:1px dotted #bbb ;
+            padding:10px 0 10px 10px;
         }
-        header nav .gnb > li > .sub1 > li > .sub2 > li > a {
-            font-size: 0.9rem;
-            line-height: 40px;
+        header nav .gnb > li > .sub1 > li > .sub2 li  a {
             color:#bbb;
             margin-left: 20px;
-            te
+            letter-spacing: -0.02rem;
         }
         header #m_nav {
             display: flex; flex-flow: column nowrap;
@@ -135,6 +148,7 @@
                     </ul>
                 </li>
             </ul>
+            <div class="nav_bg"></div>
         </nav>
         <a href="#" id="m_nav" title="모바일메뉴열기">
             <span></span>
@@ -145,5 +159,16 @@
     <main>
 
     </main>
+    <script>
+        /* 
+        1. 서브메뉴, 서브배경 모두 숨기기
+        2. gnb메뉴에 마우스 올렸을 때 서브메뉴, 서브배경 보이기
+        3. 메뉴에서 마우스 나갔을 때 서브메뉴, 버스배경 숨기기
+        (디자인 추가)
+        1. gnb 마우스 올렸을 시 서브메뉴 배경색 # ccc 회색 적용하기
+        2. gnb 마우스 올렸을 시 (서브메뉴로 마우스 나가도 유지)
+            gnb글자색 녹생변경 유지하기
+         */
+    </script>
 </body>
 </html>
